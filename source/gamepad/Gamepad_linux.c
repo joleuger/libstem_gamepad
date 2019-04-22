@@ -324,7 +324,6 @@ void Gamepad_detectDevices() {
 					continue;
 				}
 				if (!test_bit(EV_KEY, evCapBits) || !test_bit(EV_ABS, evCapBits) ||
-				    !test_bit(ABS_X, evAbsBits) || !test_bit(ABS_Y, evAbsBits) ||
 				    (!test_bit(BTN_TRIGGER, evKeyBits) && !test_bit(BTN_A, evKeyBits) && !test_bit(BTN_1, evKeyBits))) {
 					close(fd);
 					continue;
