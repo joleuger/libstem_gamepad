@@ -323,8 +323,8 @@ void Gamepad_detectDevices() {
 					close(fd);
 					continue;
 				}
-				if (!test_bit(EV_KEY, evCapBits) || !test_bit(EV_ABS, evCapBits) ||
-				    (!test_bit(BTN_TRIGGER, evKeyBits) && !test_bit(BTN_A, evKeyBits) && !test_bit(BTN_1, evKeyBits))) {
+				if (!test_bit(EV_KEY, evCapBits) || (!test_bit(BTN_TRIGGER_HAPPY1, evKeyBits) &&
+				     !test_bit(BTN_TRIGGER, evKeyBits) && !test_bit(BTN_A, evKeyBits) && !test_bit(BTN_1, evKeyBits))) {
 					close(fd);
 					continue;
 				}
